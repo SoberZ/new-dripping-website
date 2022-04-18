@@ -36,7 +36,7 @@ export default function Home() {
           <div className="max-w-7xl grid grid-cols-2 mx-auto py-40 sm:px-16">
             <div className="text-slate-50 order-1">
               <h1 className="font-helvetica-title text-3xl mb-8">ABOUT US</h1>
-              <p className="max-w-lg font-helvetica-regular leading-7">
+              <p className="max-w-lg text-xl font-helvetica-regular leading-7">
                 Dripping Dinos is reimagining and upping the standard in the
                 next generation of Ethereum NFTs. Bringing never seen before
                 utilities and culture brands to the NFT space. Focusing on
@@ -69,7 +69,7 @@ export default function Home() {
           <div className="max-w-7xl grid grid-cols-2 mx-auto py-40 sm:px-16">
             <div className="text-black order-1">
               <h1 className="font-helvetica-title text-3xl mb-8">DGK</h1>
-              <p className="max-w-lg font-helvetica-regular">
+              <p className="max-w-lg text-xl font-helvetica-regular">
                 DrippingDinos had partnered up with the world renowned street
                 fashion brand DGK. The project will implement DGK designs onto
                 the majority of the DrippingDino Traits. Holder will be eligible
@@ -92,30 +92,32 @@ export default function Home() {
         <Marquee />
 
         {/* Team */}
-        <section className="bg-zinc-900 max-w-7xl grid grid-cols-2 mx-auto py-40 sm:px-16">
-          <div className="text-slate-50 order-1">
-            <h1 className="font-helvetica-title text-3xl mb-8">TEAM</h1>
-            <p className="max-w-lg font-helvetica-regular leading-7">
-              Dripping Dinos is reimagining and upping the standard in the next
-              generation of Ethereum NFTs. Bringing never seen before utilities
-              and culture brands to the NFT space. Focusing on becoming an
-              emerging lifestyle brand, based on streetwear culture. The project
-              will create and sustain a loyal and driven movement by combining
-              the plans of building a strong community and delivering value back
-              to the holders. The collection will consist of 8000 handcrafted
-              artworks created with exceptional visual traits. Our aim is to
-              inspire a culture that connects people in the digital world, as
-              well as the real world.
-            </p>
-          </div>
-          <div className="flex items-center justify-center order-2 w-full">
-            <div className="w-[400px]">
-              <Image
-                src={dino2}
-                objectFit="cover"
-                className="w-[400px] rounded-2xl"
-                alt=""
-              />
+        <section className="bg-zinc-900">
+          <div className="max-w-7xl grid grid-cols-2 mx-auto py-40 sm:px-16">
+            <div className="text-slate-50 order-1">
+              <h1 className="font-helvetica-title text-3xl mb-8">TEAM</h1>
+              <p className="max-w-lg text-xl font-helvetica-regular leading-7">
+                Dripping Dinos is reimagining and upping the standard in the
+                next generation of Ethereum NFTs. Bringing never seen before
+                utilities and culture brands to the NFT space. Focusing on
+                becoming an emerging lifestyle brand, based on streetwear
+                culture. The project will create and sustain a loyal and driven
+                movement by combining the plans of building a strong community
+                and delivering value back to the holders. The collection will
+                consist of 8000 handcrafted artworks created with exceptional
+                visual traits. Our aim is to inspire a culture that connects
+                people in the digital world, as well as the real world.
+              </p>
+            </div>
+            <div className="flex items-center justify-center order-2 w-full">
+              <div className="w-[400px]">
+                <Image
+                  src={dino2}
+                  objectFit="cover"
+                  className="w-[400px] rounded-2xl"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -126,7 +128,7 @@ export default function Home() {
         <section className="bg-white max-w-7xl grid grid-cols-2 mx-auto py-40 sm:px-16">
           <div className="text-black order-1">
             <h1 className="font-helvetica-title text-3xl mb-8">DAO</h1>
-            <p className="max-w-lg font-helvetica-regular leading-7">
+            <p className="max-w-lg text-xl font-helvetica-regular leading-7">
               Dripping Dinos is reimagining and upping the standard in the next
               generation of Ethereum NFTs. Bringing never seen before utilities
               and culture brands to the NFT space. Focusing on becoming an

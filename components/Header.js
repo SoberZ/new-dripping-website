@@ -10,10 +10,16 @@ function Header() {
       {/* left */}
       <div className="relative flex h-16 cursor-pointer my-auto">
         <div className="hidden md:flex">
-        <Image src={logo} layout='fill' objectFit="contain" objectPosition="left" alt="" />
+          <Image
+            src={logo}
+            layout="fill"
+            objectFit="contain"
+            objectPosition="left"
+            alt=""
+          />
         </div>
         <div className="flex md:hidden">
-        <Image src={logo} layout='fill' objectFit="contain" alt=""/>
+          <Image src={logo} layout="fill" objectFit="contain" alt="" />
         </div>
       </div>
 
@@ -53,6 +59,9 @@ function Header() {
             alt=""
           />
         </div>
+        <button className="font-helvetica-title text-slate-50 ml-3 rounded-md border-2 bg-zinc-900 py-2 px-5 hover:bg-slate-50 hover:border-slate-50 hover:text-zinc-900 transition duration-150 active:scale-90">
+          MINT
+        </button>
       </div>
     </header>
   );
