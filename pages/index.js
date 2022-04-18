@@ -43,7 +43,7 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-center order-2 w-full">
               <div className="w-[400px]">
-                <Image src={dino3} objectFit="cover" className="w-[400px] rounded-2xl" />
+                <Image src={dino3} objectFit="cover" className="w-[400px] rounded-2xl" alt="" />
               </div>
             </div>
           </div>
@@ -65,7 +65,7 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-center order-2 w-full">
               <div className="w-[500px]">
-                <Image src={twins} objectFit="cover" className="w-[400px]" />
+                <Image src={twins} objectFit="cover" className="w-[400px]" alt="" />
               </div>
             </div>
           </div>
@@ -92,7 +92,7 @@ export default function Home() {
           </div>
           <div className="flex items-center justify-center order-2 w-full">
             <div className="w-[400px]">
-              <Image src={dino2} objectFit="cover" className="w-[400px] rounded-2xl" />
+              <Image src={dino2} objectFit="cover" className="w-[400px] rounded-2xl" alt="" />
             </div>
           </div>
         </section>
@@ -118,7 +118,7 @@ export default function Home() {
           </div>
           <div className="flex items-center justify-center order-2 w-full">
             <div className="w-[400px]">
-              <Image src={dino5} objectFit="cover" className="w-[400px] rounded-2xl" />
+              <Image src={dino5} objectFit="cover" className="w-[400px] rounded-2xl" alt="" />
             </div>
           </div>
         </section>

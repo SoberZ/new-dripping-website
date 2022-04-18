@@ -10,10 +10,10 @@ function Header() {
       {/* left */}
       <div className="relative flex h-16 cursor-pointer my-auto">
         <div className="hidden md:flex">
-        <Image src={logo} layout='fill' objectFit="contain" objectPosition="left" />
+        <Image src={logo} layout='fill' objectFit="contain" objectPosition="left" alt="" />
         </div>
         <div className="flex md:hidden">
-        <Image src={logo} layout='fill' objectFit="contain"/>
+        <Image src={logo} layout='fill' objectFit="contain" alt=""/>
         </div>
       </div>
 
@@ -34,6 +34,7 @@ function Header() {
             src={twitterImg}
             objectFit="contain"
             className="cursor-pointer"
+            alt=""
           />
         </div>
         <div className="mx-2">
@@ -41,6 +42,7 @@ function Header() {
             src={instagramImg}
             objectFit="contain"
             className="cursor-pointer"
+            alt=""
           />
         </div>
         <div className="mx-2">
@@ -48,6 +50,7 @@ function Header() {
             src={discordImg}
             objectFit="contain"
             className="cursor-pointer"
+            alt=""
           />
         </div>
       </div>

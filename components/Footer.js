@@ -19,6 +19,7 @@ export default function Footer() {
             src={twitterImg}
             objectFit="contain"
             className="cursor-pointer"
+            alt=""
           />
         </div>
         <div className="mx-2">
@@ -26,6 +27,7 @@ export default function Footer() {
             src={instagramImg}
             objectFit="contain"
             className="cursor-pointer"
+            alt=""
           />
         </div>
         <div className="mx-2">
@@ -33,6 +35,7 @@ export default function Footer() {
             src={discordImg}
             objectFit="contain"
             className="cursor-pointer"
+            alt=""
           />
         </div>
       </div>
