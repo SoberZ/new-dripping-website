@@ -8,10 +8,10 @@
 
 @font-face {
     font-family: "Helvetica Now Display Regular";
-    src: url("../public/assets/fonts/helvetica-now/HelveticaNowDisplay-Regular.woff2")
+    src: url("/assets/fonts/helvetica-now/HelveticaNowDisplay-Regular.woff2")
 }
 
 @font-face {
     font-family: "Helvetica Now Display Title";
-    src: url("../public/assets/fonts/helvetica-now/HelveticaNowDisplay-ExtBlk.woff2")
+    src: url("/assets/fonts/helvetica-now/HelveticaNowDisplay-ExtBlk.woff2")
 }

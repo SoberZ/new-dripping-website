@@ -1,7 +1,7 @@
-import logo from "/assets/images/logo.png";
-import twitterImg from "/assets/images/twitter.svg";
-import discordImg from "/assets/images/discord.svg";
-import instagramImg from "/assets/images/instagram.svg";
+import logo from "../public/assets/images/logo.png";
+import twitterImg from "../public/assets/images/twitter.svg";
+import discordImg from "../public/assets/images/discord.svg";
+import instagramImg from "../public/assets/images/instagram.svg";
 import Image from "next/image";
 
 function Header() {
