@@ -15,6 +15,14 @@ export default function Home() {
       <Head>
         <title>Dripping Dinos</title>
         <meta name="description" content="Dripping Dinos" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Fira+Sans:wght@500;700&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="http://fonts.cdnfonts.com/css/akira-expanded"
+          rel="stylesheet"
+        />
       </Head>
 
       <Header />
@@ -43,7 +51,12 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-center order-2 w-full">
               <div className="w-[400px]">
-                <Image src={dino3} objectFit="cover" className="w-[400px] rounded-2xl" alt="" />
+                <Image
+                  src={dino3}
+                  objectFit="cover"
+                  className="w-[400px] rounded-2xl"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -65,7 +78,12 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-center order-2 w-full">
               <div className="w-[500px]">
-                <Image src={twins} objectFit="cover" className="w-[400px]" alt="" />
+                <Image
+                  src={twins}
+                  objectFit="cover"
+                  className="w-[400px]"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -92,7 +110,12 @@ export default function Home() {
           </div>
           <div className="flex items-center justify-center order-2 w-full">
             <div className="w-[400px]">
-              <Image src={dino2} objectFit="cover" className="w-[400px] rounded-2xl" alt="" />
+              <Image
+                src={dino2}
+                objectFit="cover"
+                className="w-[400px] rounded-2xl"
+                alt=""
+              />
             </div>
           </div>
         </section>
@@ -118,11 +141,15 @@ export default function Home() {
           </div>
           <div className="flex items-center justify-center order-2 w-full">
             <div className="w-[400px]">
-              <Image src={dino5} objectFit="cover" className="w-[400px] rounded-2xl" alt="" />
+              <Image
+                src={dino5}
+                objectFit="cover"
+                className="w-[400px] rounded-2xl"
+                alt=""
+              />
             </div>
           </div>
         </section>
-
       </main>
 
       <Footer />
