@@ -15,14 +15,6 @@ export default function Home() {
       <Head>
         <title>Dripping Dinos</title>
         <meta name="description" content="Dripping Dinos" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Fira+Sans:wght@500;700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="http://fonts.cdnfonts.com/css/akira-expanded"
-          rel="stylesheet"
-        />
       </Head>
 
       <Header />
