@@ -12,26 +12,31 @@ import DGK from "../components/sections/DGK";
 export default function Home() {
   const teamData = [
     {
+      id: 0,
       name: "Reza",
       image: dino5,
       role: "Co-Founder",
     },
     {
+      id: 1,
       name: "Jeffrey",
       image: dino2,
       role: "Co-Founder",
     },
     {
+      id: 2,
       name: "Stevie Williams",
       image: dino2,
       role: "DGK Founder",
     },
     {
+      id: 3,
       name: "Dusty",
       image: dino5,
       role: "Web Developer",
     },
     {
+      id: 4,
       name: "Eduardo",
       image: dino5,
       role: "3D Designer",
@@ -65,11 +70,12 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap flex-col items-center sm:items-start sm:flex-row justify-center order-2 w-full">
               {teamData.map((item) => (
-                <div className="w-[200px] m-5">
+                <div className="w-[200px] m-5" key={item.id}>
                   <Image
                     src={item.image}
                     objectFit="cover"
                     className="rounded-2xl"
+                    alt=""
                   />
                   <h1 className="text-md md:text-xl text-slate-50 font-akira">
                     {item.name}
