@@ -112,7 +112,7 @@ function Roadmap({ buttonRef, changeColor }) {
       </div>
       {/* Content */}
       {phases.map((phase) => (
-        <div className="pt-10">
+        <div className="pt-10" key={phase.name}>
           <h1 className="font-akira text-lg">{phase.name}</h1>
           {phase.items.map((item) => (
             <Phase
