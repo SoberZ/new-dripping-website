@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import roadmapSVG from "../public/assets/images/road-map.svg";
-import dino3 from "../public/assets/images/roadmap_dino_3.png"
+import dino3 from "../public/assets/images/roadmap_dino_3.png";
 import closeIcon from "../public/assets/images/close.svg";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 import Phase from "./Phase";
@@ -15,35 +15,51 @@ function Roadmap({ buttonRef, changeColor }) {
   const phasesData = [
     {
       name: "Phase 1",
-      description: "In phase one we will focus on this and that and furthermore also this and that because of this and that yes this and that",
-      image: dino3
+      items: [
+        {
+          name: "Iets cools",
+          description:
+            "In Iets coolsne we will focus on this and that and furthermore also this and that because of this and that yes this and that",
+          image: dino3,
+        },
+        {
+          name: "Iets cools",
+          description:
+            "In Iets coolsne we will focus on this and that and furthermore also this and that because of this and that yes this and that",
+          image: dino3,
+        },
+        {
+          name: "Iets cools",
+          description:
+            "In Iets coolsne we will focus on this and that and furthermore also this and that because of this and that yes this and that",
+          image: dino3,
+        },
+      ],
     },
     {
       name: "Phase 2",
-      description: "In phase one we will focus on this and that and furthermore also this and that because of this and that yes this and that",
-      image: dino3
+      items: [
+        {
+          name: "Iets cools",
+          description:
+            "In Iets coolsne we will focus on this and that and furthermore also this and that because of this and that yes this and that",
+          image: dino3,
+        },
+        {
+          name: "Iets cools",
+          description:
+            "In Iets coolsne we will focus on this and that and furthermore also this and that because of this and that yes this and that",
+          image: dino3,
+        },
+        {
+          name: "Iets cools",
+          description:
+            "In Iets coolsne we will focus on this and that and furthermore also this and that because of this and that yes this and that",
+          image: dino3,
+        },
+      ],
     },
-    {
-      name: "Phase 3",
-      description: "In phase one we will focus on this and that and furthermore also this and that because of this and that yes this and that",
-      image: dino3
-    },
-    {
-      name: "Phase 4",
-      description: "In phase one we will focus on this and that and furthermore also this and that because of this and that yes this and that",
-      image: dino3
-    },
-    {
-      name: "Phase 5",
-      description: "In phase one we will focus on this and that and furthermore also this and that because of this and that yes this and that",
-      image: dino3
-    },
-    {
-      name: "Phase 6",
-      description: "In phase one we will focus on this and that and furthermore also this and that because of this and that yes this and that",
-      image: dino3
-    },
-  ]
+  ];
 
   const handleOnClick = (e) => {
     e.preventDefault();
@@ -71,13 +87,13 @@ function Roadmap({ buttonRef, changeColor }) {
 
   const RoadmapComponent = ({ phases }) => (
     <div
-      className={`${animateState} top-0 z-50 h-screen bg-white p-20 w-full sm:w-4/6 md:w-1/3 duration-500 overflow-y-scroll`}
+      className={`${animateState} top-0 z-50 h-screen bg-white p-5 lg:p-20 w-full sm:w-4/6 md:w-5/12 duration-500 overflow-y-scroll`}
       id="roadmap"
     >
       {/* Top */}
       <div className="grid grid-cols-2 center items-center">
         <h1 className="text-black font-helvetica-title text-2xl justify-start">
-          ROADMAP
+          DRIPPING ROADMAP
         </h1>
         <div className="flex justify-end">
           <button
@@ -95,8 +111,18 @@ function Roadmap({ buttonRef, changeColor }) {
         </div>
       </div>
       {/* Content */}
-      {phases.map((item) => (
-        <Phase name={item.name} description={item.description} image={item.image} key={item.name}/>
+      {phases.map((phase) => (
+        <div className="pt-10">
+          <h1 className="font-akira text-lg">{phase.name}</h1>
+          {phase.items.map((item) => (
+            <Phase
+              name={item.name}
+              description={item.description}
+              image={item.image}
+              key={item.name}
+            />
+          ))}
+        </div>
       ))}
     </div>
   );
