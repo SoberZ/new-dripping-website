@@ -71,10 +71,6 @@ export default function Home() {
 
   return (
     <div>
-      <Head>
-        <title>Dripping Dinos</title>
-        <meta name="description" content="Dripping Dinos" />
-      </Head>
       <Header />
 
       <Banner />
