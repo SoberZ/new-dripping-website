@@ -1,3 +1,4 @@
+import React, { useRef, useEffect, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Banner from "../components/Banner";
@@ -8,8 +9,24 @@ import dino2 from "../public/assets/images/roadmap_dino_2.png";
 import dino5 from "../public/assets/images/roadmap_dino_5.png";
 import AboutUs from "../components/sections/AboutUs";
 import DGK from "../components/sections/DGK";
+import Roadmap from "../components/Roadmap";
 
 export default function Home() {
+  const roadmapRef = useRef()
+  const whiteDivRef = useRef()
+  const [changeColor, setChangeColor] = useState(false)
+
+  const scrollHandler = _ => {
+    const rmBounding = roadmapRef.current.getBoundingClientRect()
+    const wdBounding = whiteDivRef.current.getBoundingClientRect()
+
+    if (rmBounding.y > wdBounding.y && wdBounding.y > (rmBounding.y - wdBounding.height)) {
+      setChangeColor(true)
+    } else {
+      setChangeColor(false)
+    }
+  };
+
   const teamData = [
     {
       id: 0,
@@ -44,22 +61,30 @@ export default function Home() {
 
   ];
 
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHandler, true);
+    return () => {
+      window.removeEventListener("scroll", scrollHandler, true);
+    };
+  }, []);
+
+
   return (
-    <div className="">
+    <div>
       <Head>
         <title>Dripping Dinos</title>
         <meta name="description" content="Dripping Dinos" />
       </Head>
-
       <Header />
-      {/* <Banner /> */}
+
+      <Banner />
 
       <Marquee />
 
       <main>
         <AboutUs />
         <Marquee />
-        <DGK />
+        <DGK sectionRef={whiteDivRef}/>
         <Marquee />
 
         {/* Team */}
@@ -122,6 +147,7 @@ export default function Home() {
       </main>
 
       <Footer />
+      <Roadmap buttonRef={roadmapRef} changeColor={changeColor}/>
     </div>
   );
 }

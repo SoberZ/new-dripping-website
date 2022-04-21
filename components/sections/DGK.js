@@ -1,9 +1,9 @@
 import Image from "next/image";
 import twins from "../../public/assets/images/twin_dinos.png";
 
-function DGK() {
+function DGK({sectionRef}) {
   return (
-    <section className="bg-white">
+    <section className="bg-white" ref={sectionRef}>
       <div className="max-w-7xl grid grid-cols-1 md:grid-cols-2 mx-auto py-40 sm:px-16">
         <div className="text-black mb-12 md:mb-0 order-1 text-center md:text-left p-7 md:p-0">
           <h1 className="font-helvetica-title text-3xl mb-8">DGK</h1>
