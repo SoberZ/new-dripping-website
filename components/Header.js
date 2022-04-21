@@ -9,13 +9,14 @@ function Header() {
     <header className="fixed backdrop-blur-sm w-full z-40">
       <div className="sticky top-0 grid grid-cols-1 md:grid-cols-2 bg-transparent p-2 md:px-24">
         {/* left */}
-        <div className="relative flex h-16 cursor-pointer my-auto">
-          <div className="hidden md:flex">
+        <div className="relative flex h-20 my-auto">
+          <div className="hidden md:flex w-full">
             <Image
               src={logo}
               layout="fill"
               objectFit="contain"
               objectPosition="left"
+              className="cursor-pointer"
               alt=""
             />
           </div>
