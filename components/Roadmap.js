@@ -89,7 +89,7 @@ function Roadmap({ buttonRef, changeColor }) {
 
   const RoadmapComponent = ({ phases }) => (
     <div
-      className={`${animateState} top-0 z-50 h-screen bg-white p-5 lg:p-20 w-full sm:w-4/6 md:w-5/12 duration-500 overflow-y-scroll`}
+      className={`${animateState} top-0 z-50 h-screen bg-white p-5 lg:p-20 sm:w-4/6 md:w-5/12 duration-500 overflow-y-scroll`}
       id="roadmap"
     >
       {/* Top */}

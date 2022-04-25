@@ -105,7 +105,7 @@ export default function Home() {
                 DRIPPING TEAM
               </h1>
             </div>
-            <div className="flex flex-wrap flex-col items-center sm:items-start sm:flex-row justify-center order-2 w-full">
+            <div className="flex flex-wrap flex-col items-center sm:items-start sm:flex-row justify-center order-2">
               {teamData.map((item) => (
                 <div className="w-[200px] m-5" key={item.id}>
                   <Image
@@ -146,7 +146,7 @@ export default function Home() {
               well as the real world.
             </p>
           </div>
-          <div className="flex items-center justify-center order-2 w-full">
+          <div className="flex items-center justify-center order-2">
             <div className="w-[400px]">
               <Image
                 src={dino5}

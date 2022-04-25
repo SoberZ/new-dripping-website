@@ -8,11 +8,11 @@ import Link from "next/link";
 
 function Header({showBackground}) {
   return (
-    <header className={`fixed ${showBackground ? "backdrop-blur-sm bg-main-black bg-opacity-25 animate duration-300" : ""} w-full z-40`}>
+    <header className={`fixed ${showBackground ? "backdrop-blur-sm bg-main-black bg-opacity-25 animate duration-300" : ""} z-40`}>
       <div className="sticky top-0 grid grid-cols-1 md:grid-cols-2 p-0.5 sm:p-2 md:px-24">
         {/* left */}
         <div className="relative flex h-20 my-auto">
-          <div className="hidden md:flex w-full">
+          <div className="hidden md:flex">
             <Image
               src={logo}
               layout="fill"

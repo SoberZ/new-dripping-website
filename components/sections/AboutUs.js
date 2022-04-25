@@ -20,7 +20,7 @@ function AboutUs() {
           people in the digital world, as well as the real world.
         </p>
       </div>
-      <div className="flex items-center justify-center order-2 w-full">
+      <div className="flex items-center justify-center order-2">
         <div className="w-[300px] md:w-[400px]">
           <Image
             src={dino3}

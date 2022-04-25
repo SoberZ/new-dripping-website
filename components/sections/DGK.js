@@ -14,7 +14,7 @@ function DGK({sectionRef}) {
             future giveaways involving
           </p>
         </div>
-        <div className="flex items-center justify-center order-2 w-full">
+        <div className="flex items-center justify-center order-2">
           <div className="w-[300px] md:w-[400px]">
             <Image src={twins} objectFit="cover" className="" alt="" />
           </div>
