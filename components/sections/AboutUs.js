@@ -3,7 +3,7 @@ import dino3 from "../../public/assets/images/roadmap_dino_3.png";
 
 function AboutUs() {
   return (
-    <section className="bg-zinc-900 ">
+    <section className="bg-main-black">
     <div className="max-w-7xl grid grid-cols-1 md:grid-cols-2 mx-auto py-40 sm:px-16">
       <div className="text-slate-50 mb-12 md:mb-0 order-1 text-center md:text-left p-7 md:p-0">
         <h1 className="font-helvetica-title text-3xl mb-8  md:text-left">ABOUT US</h1>

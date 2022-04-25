@@ -1,3 +1,4 @@
+import { useRef, useEffect } from "react";
 import logo from "../public/assets/images/logo.png";
 import twitterImg from "../public/assets/images/twitter.svg";
 import discordImg from "../public/assets/images/discord.svg";
@@ -5,10 +6,10 @@ import instagramImg from "../public/assets/images/instagram.svg";
 import Image from "next/image";
 import Link from "next/link";
 
-function Header() {
+function Header({showBackground}) {
   return (
-    <header className="fixed backdrop-blur-sm w-full z-40">
-      <div className="sticky top-0 grid grid-cols-1 md:grid-cols-2 bg-transparent p-2 md:px-24">
+    <header className={`fixed ${showBackground ? "backdrop-blur-sm bg-main-black bg-opacity-25 animate duration-300" : ""} w-full z-40`}>
+      <div className="sticky top-0 grid grid-cols-1 md:grid-cols-2 p-0.5 sm:p-2 md:px-24">
         {/* left */}
         <div className="relative flex h-20 my-auto">
           <div className="hidden md:flex w-full">
@@ -58,7 +59,7 @@ function Header() {
               />
             </div>
           </Link>
-          <button className="font-helvetica-title text-sm text-slate-50 ml-3 rounded-md border-2 bg-zinc-900 py-2 px-5 hover:bg-slate-50 hover:border-slate-50 hover:text-zinc-900 transition duration-150 active:scale-90">
+          <button className="font-helvetica-title text-sm text-slate-50 ml-3 rounded-md border-2 bg-main-black py-2 px-5 hover:bg-slate-50 hover:border-slate-50 hover:text-zinc-900 transition duration-150 active:scale-90">
             WHITEPAPER
           </button>
         </div>

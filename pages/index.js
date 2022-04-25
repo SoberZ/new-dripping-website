@@ -10,32 +10,33 @@ import dino5 from "../public/assets/images/roadmap_dino_5.png";
 import AboutUs from "../components/sections/AboutUs";
 import DGK from "../components/sections/DGK";
 import Roadmap from "../components/Roadmap";
+import DinoPreviews from "../components/DinoPreviews";
 
 export default function Home() {
-  const roadmapRef = useRef()
-  const whiteDivRef = useRef()
-  const whiteDivRef2 = useRef()
-  const [changeColor, setChangeColor] = useState(false)
+  const roadmapRef = useRef();
+  const whiteDivRef = useRef();
+  const whiteDivRef2 = useRef();
+  const [showHeaderBg, setShowHeaderBg] = useState(false);
+  const [changeColor, setChangeColor] = useState(false);
 
-  const scrollHandler = _ => {
-    const rmBounding = roadmapRef.current.getBoundingClientRect()
-    const wdBounding = whiteDivRef.current.getBoundingClientRect()
+  // Change Roadmap text color on hover over section.
+  const scrollHandler = (_) => {
+    const rmBounding = roadmapRef.current.getBoundingClientRect();
+    const wdBounding = whiteDivRef.current.getBoundingClientRect();
+    const wdBounding2 = whiteDivRef2.current.getBoundingClientRect();
 
-    if (rmBounding.y > wdBounding.y && wdBounding.y > (rmBounding.y - wdBounding.height)) {
-      setChangeColor(true)
+    setShowHeaderBg(window.scrollY > 0 ? true : false);
+
+    // The 2 white sections
+    if (
+      (rmBounding.y > wdBounding.y &&
+        wdBounding.y > rmBounding.y - wdBounding.height) ||
+      (rmBounding.y > wdBounding2.y &&
+        wdBounding2.y > rmBounding.y - wdBounding2.height)
+    ) {
+      setChangeColor(true);
     } else {
-      setChangeColor(false)
-    }
-  };
-
-  const scrollHandler2 = _ => {
-    const rmBounding = roadmapRef.current.getBoundingClientRect()
-    const wdBounding = whiteDivRef2.current.getBoundingClientRect()
-
-    if (rmBounding.y > wdBounding.y && wdBounding.y > (rmBounding.y - wdBounding.height)) {
-      setChangeColor(true)
-    } else {
-      setChangeColor(false)
+      setChangeColor(false);
     }
   };
 
@@ -70,37 +71,40 @@ export default function Home() {
       image: dino5,
       role: "3D Designer",
     },
-
   ];
 
   useEffect(() => {
     window.addEventListener("scroll", scrollHandler, true);
-    window.addEventListener("scroll", scrollHandler2, true);
     return () => {
       window.removeEventListener("scroll", scrollHandler, true);
-      window.removeEventListener("scroll", scrollHandler2, true);
     };
   }, []);
 
-
   return (
     <div>
-      <Header />
+      <Header showBackground={showHeaderBg} />
 
       <Banner />
 
       <Marquee />
 
+      <DinoPreviews />
+
+      <Marquee />
+
       <main>
+
         <AboutUs />
 
-        <DGK sectionRef={whiteDivRef}/>
+        <DGK sectionRef={whiteDivRef} />
 
         {/* Team */}
-        <section className="bg-zinc-900">
+        <section className="bg-main-black">
           <div className="flex flex-col py-40 px-20">
             <div className="text-slate-50 order-1 text-center">
-              <h1 className="font-helvetica-title text-3xl mb-8 ">DRIPPING TEAM</h1>
+              <h1 className="font-helvetica-title text-3xl mb-8 ">
+                DRIPPING TEAM
+              </h1>
             </div>
             <div className="flex flex-wrap flex-col items-center sm:items-start sm:flex-row justify-center order-2 w-full">
               {teamData.map((item) => (
@@ -124,7 +128,10 @@ export default function Home() {
         </section>
 
         {/* DAO */}
-        <section className="bg-white max-w-7xl grid grid-cols-2 mx-auto py-40 sm:px-16" ref={whiteDivRef2}>
+        <section
+          className="bg-white max-w-7xl grid grid-cols-2 mx-auto py-40 sm:px-16"
+          ref={whiteDivRef2}
+        >
           <div className="text-black order-1">
             <h1 className="font-helvetica-title text-3xl mb-8">DAO</h1>
             <p className="max-w-lg text-xl font-helvetica-regular leading-7">
@@ -156,7 +163,7 @@ export default function Home() {
       <Marquee />
 
       <Footer />
-      <Roadmap buttonRef={roadmapRef} changeColor={changeColor}/>
+      <Roadmap buttonRef={roadmapRef} changeColor={changeColor} />
     </div>
   );
 }

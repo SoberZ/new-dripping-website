@@ -10,7 +10,8 @@ function Roadmap({ buttonRef, changeColor }) {
   const { _, width } = useWindowDimensions();
   const [show, setShow] = useState(false);
   const [animateState, setAnimateState] = useState("hidden");
-  const [timeoutOn, setTimeoutOn] = useState(false);
+  const [hideTimeoutOn, setHideTimeoutOn] = useState(false);
+  const [showTimeoutOn, setShowTimeoutOn] = useState(false);
 
   const phasesData = [
     {
@@ -53,27 +54,38 @@ function Roadmap({ buttonRef, changeColor }) {
 
   const handleOnClick = (e) => {
     e.preventDefault();
-    if (!timeoutOn) {
-      setShow(!show);
+    if (!hideTimeoutOn || !showTimeoutOn) {
       if (show) {
         setAnimateState("fixed animate-slide-left");
-        setTimeoutOn(true);
+        setHideTimeoutOn(true);
       } else {
         setAnimateState("fixed animate-slide-right");
+        setShowTimeoutOn(true);
       }
+      setShow(!show);
     }
   };
 
   // Hide roadmap after animation has finished
   useEffect(() => {
-    if (timeoutOn) {
+    if (hideTimeoutOn) {
       setTimeout(() => {
+        setHideTimeoutOn(false);
         setAnimateState("hidden");
-        setTimeoutOn(false);
-      }, 2000);
+      }, 1000);
       return () => clearTimeout();
     }
-  }, [timeoutOn]);
+  }, [hideTimeoutOn]);
+
+  useEffect(() => {
+    if (showTimeoutOn) {
+      setTimeout(() => {
+        setShowTimeoutOn(false);
+        setAnimateState("fixed");
+      }, 1000);
+      return () => clearTimeout();
+    }
+  }, [showTimeoutOn]);
 
   const RoadmapComponent = ({ phases }) => (
     <div
