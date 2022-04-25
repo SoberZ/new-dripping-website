@@ -14,11 +14,23 @@ import Roadmap from "../components/Roadmap";
 export default function Home() {
   const roadmapRef = useRef()
   const whiteDivRef = useRef()
+  const whiteDivRef2 = useRef()
   const [changeColor, setChangeColor] = useState(false)
 
   const scrollHandler = _ => {
     const rmBounding = roadmapRef.current.getBoundingClientRect()
     const wdBounding = whiteDivRef.current.getBoundingClientRect()
+
+    if (rmBounding.y > wdBounding.y && wdBounding.y > (rmBounding.y - wdBounding.height)) {
+      setChangeColor(true)
+    } else {
+      setChangeColor(false)
+    }
+  };
+
+  const scrollHandler2 = _ => {
+    const rmBounding = roadmapRef.current.getBoundingClientRect()
+    const wdBounding = whiteDivRef2.current.getBoundingClientRect()
 
     if (rmBounding.y > wdBounding.y && wdBounding.y > (rmBounding.y - wdBounding.height)) {
       setChangeColor(true)
@@ -63,8 +75,10 @@ export default function Home() {
 
   useEffect(() => {
     window.addEventListener("scroll", scrollHandler, true);
+    window.addEventListener("scroll", scrollHandler2, true);
     return () => {
       window.removeEventListener("scroll", scrollHandler, true);
+      window.removeEventListener("scroll", scrollHandler2, true);
     };
   }, []);
 
@@ -79,9 +93,8 @@ export default function Home() {
 
       <main>
         <AboutUs />
-        <Marquee />
+
         <DGK sectionRef={whiteDivRef}/>
-        <Marquee />
 
         {/* Team */}
         <section className="bg-zinc-900">
@@ -110,10 +123,8 @@ export default function Home() {
           </div>
         </section>
 
-        <Marquee />
-
         {/* DAO */}
-        <section className="bg-white max-w-7xl grid grid-cols-2 mx-auto py-40 sm:px-16">
+        <section className="bg-white max-w-7xl grid grid-cols-2 mx-auto py-40 sm:px-16" ref={whiteDivRef2}>
           <div className="text-black order-1">
             <h1 className="font-helvetica-title text-3xl mb-8">DAO</h1>
             <p className="max-w-lg text-xl font-helvetica-regular leading-7">
@@ -141,6 +152,8 @@ export default function Home() {
           </div>
         </section>
       </main>
+
+      <Marquee />
 
       <Footer />
       <Roadmap buttonRef={roadmapRef} changeColor={changeColor}/>

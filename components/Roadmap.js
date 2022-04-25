@@ -15,49 +15,39 @@ function Roadmap({ buttonRef, changeColor }) {
   const phasesData = [
     {
       name: "Phase 1",
-      items: [
-        {
-          name: "Iets cools",
-          description:
-            "In Iets coolsne we will focus on this and that and furthermore also this and that because of this and that yes this and that",
-          image: dino3,
-        },
-        {
-          name: "Iets cools",
-          description:
-            "In Iets coolsne we will focus on this and that and furthermore also this and that because of this and that yes this and that",
-          image: dino3,
-        },
-        {
-          name: "Iets cools",
-          description:
-            "In Iets coolsne we will focus on this and that and furthermore also this and that because of this and that yes this and that",
-          image: dino3,
-        },
-      ],
+      description:
+        "Design Starting off designing all 8000 Dripping Dinos to go above and beyond every expectation. Our aim is to deliver the most exceptional looking and aesthetically pleasing NFT artworks in the world. We want to make each Dino look unique and stand out in its own way, which is why we have made sure to create over 250+ different types of traits of the highest quality.",
+      image: dino3,
     },
     {
       name: "Phase 2",
-      items: [
-        {
-          name: "Iets cools",
-          description:
-            "In Iets coolsne we will focus on this and that and furthermore also this and that because of this and that yes this and that",
-          image: dino3,
-        },
-        {
-          name: "Iets cools",
-          description:
-            "In Iets coolsne we will focus on this and that and furthermore also this and that because of this and that yes this and that",
-          image: dino3,
-        },
-        {
-          name: "Iets cools",
-          description:
-            "In Iets coolsne we will focus on this and that and furthermore also this and that because of this and that yes this and that",
-          image: dino3,
-        },
-      ],
+      description:
+        "Minting A DGK Private sale will start off the mint with a total of 1000 NFT’s. Our public sale will consist of the remaining 7000 pieces. You will be able to mint from our own website.",
+      image: dino3,
+    },
+    {
+      name: "Phase 3",
+      description:
+        "DGK Stevie Williams, one of the biggest skater icons, joined our core team. With Stevie on board we've been able to set up a partnership with the streetwear brand DGK. The DGK designs will be implemented into our collection. All holders will receive an exclusive DGK hoodie and skateboard after the public mint, with this you will be fully dripped out and ready to have an amazing experience. We will host skate and yacht parties in Los Angeles where you can have the chance to meet the team including Stevie Williams.",
+      image: dino3,
+    },
+    {
+      name: "Phase 4",
+      description:
+        "Designer Brand We want to stay true to our name Dripping Dino’s, which is why we will strive to create an exclusive and unique Lifestyle brand. With our Huge partnerships in the fashion industry we will make sure that we will deliver exceptional premium quality clothing. Our experienced designers will make sure that you're not only dripping online but also in the real world.",
+      image: dino3,
+    },
+    {
+      name: "Phase 5",
+      description:
+        "Designer Brand We want to stay true to our name Dripping Dino’s, which is why we will strive to create an exclusive and unique Lifestyle brand. With our Huge partnerships in the fashion industry we will make sure that we will deliver exceptional premium quality clothing. Our experienced designers will make sure that you're not only dripping online but also in the real world.",
+      image: dino3,
+    },
+    {
+      name: "Phase 6",
+      description:
+        "Charity We are creating a charity to provide a helping hand to people in need without compromising the needs of our holders. We want to give back in a sustainable way and make an impact in the world while using this incredible technology. Dripping Dino’s will pledge to donate 100.000 USD worth of clothing to our own charity in the first week of minting.",
+      image: dino3,
     },
   ];
 
@@ -92,7 +82,7 @@ function Roadmap({ buttonRef, changeColor }) {
     >
       {/* Top */}
       <div className="grid grid-cols-2 center items-center">
-        <h1 className="text-black font-helvetica-title text-2xl justify-start">
+        <h1 className="text-black font-helvetica-title text-md md:text-xl justify-start">
           DRIPPING ROADMAP
         </h1>
         <div className="flex justify-end">
@@ -113,15 +103,11 @@ function Roadmap({ buttonRef, changeColor }) {
       {/* Content */}
       {phases.map((phase) => (
         <div className="pt-10" key={phase.name}>
-          <h1 className="font-akira text-lg">{phase.name}</h1>
-          {phase.items.map((item) => (
-            <Phase
-              name={item.name}
-              description={item.description}
-              image={item.image}
-              key={item.name}
-            />
-          ))}
+          <Phase
+            name={phase.name}
+            description={phase.description}
+            image={phase.image}
+          />
         </div>
       ))}
     </div>
@@ -138,7 +124,7 @@ function Roadmap({ buttonRef, changeColor }) {
         <button
           className={`${
             changeColor ? "text-black" : "text-white"
-          } sticky font-helvetica-title p-3 text-sm sm:text-md border-2 rounded-full backdrop-blur-md active:scale-95 transition duration-100 hover:shadow-xl hover:backdrop-blur-sm`}
+          } sticky font-helvetica-title px-7 py-4 text-sm sm:text-md border-2 rounded-full backdrop-blur-md active:scale-95 transition duration-100 hover:shadow-xl hover:backdrop-blur-sm`}
           onClick={handleOnClick}
         >
           {/* REHYDRATION ERROR */}
