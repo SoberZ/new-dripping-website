@@ -88,15 +88,14 @@ export default function Home() {
 
       <Marquee />
 
-      <DinoPreviews />
-
-      <Marquee />
-
       <main>
-
         <AboutUs />
 
         <DGK sectionRef={whiteDivRef} />
+
+        <Marquee />
+        <DinoPreviews />
+        <Marquee />
 
         {/* Team */}
         <section className="bg-main-black">
