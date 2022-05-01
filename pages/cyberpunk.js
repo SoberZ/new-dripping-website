@@ -22,33 +22,33 @@ export default function Cyberpunk() {
   const [changeColor, setChangeColor] = useState(false);
 
   // Change Roadmap text color on hover over section.
-//   const scrollHandler = (_) => {
-//     const rmBounding = roadmapRef.current.getBoundingClientRect();
-//     const wdBounding = whiteDivRef.current.getBoundingClientRect();
-//     const wdBounding2 = whiteDivRef2.current.getBoundingClientRect();
+  const scrollHandler = (_) => {
+    const rmBounding = roadmapRef.current.getBoundingClientRect();
+    const wdBounding = whiteDivRef.current.getBoundingClientRect();
+    const wdBounding2 = whiteDivRef2.current.getBoundingClientRect();
 
-//     setShowHeaderBg(window.scrollY > 0 ? true : false);
+    setShowHeaderBg(window.scrollY > 0 ? true : false);
 
-//     // The 2 white sections
-//     if (
-//       (rmBounding.y > wdBounding.y &&
-//         wdBounding.y > rmBounding.y - wdBounding.height) ||
-//       (rmBounding.y > wdBounding2.y &&
-//         wdBounding2.y > rmBounding.y - wdBounding2.height)
-//     ) {
-//       setChangeColor(true);
-//     } else {
-//       setChangeColor(false);
-//     }
-//   };
+    // The 2 white sections
+    if (
+      (rmBounding.y > wdBounding.y &&
+        wdBounding.y > rmBounding.y - wdBounding.height) ||
+      (rmBounding.y > wdBounding2.y &&
+        wdBounding2.y > rmBounding.y - wdBounding2.height)
+    ) {
+      setChangeColor(true);
+    } else {
+      setChangeColor(false);
+    }
+  };
 
 
-//   useEffect(() => {
-//       window.addEventListener("scroll", scrollHandler, true);
-//       return () => {
-//       window.removeEventListener("scroll", scrollHandler, true);
-//     };
-// }, []);
+  useEffect(() => {
+      window.addEventListener("scroll", scrollHandler, true);
+      return () => {
+      window.removeEventListener("scroll", scrollHandler, true);
+    };
+}, []);
 
 const teamData = [
   {
