@@ -91,8 +91,8 @@ const teamData = [
 
       <div className=" bg-main-black">
         {/* <Image src={wbanner} layout="fill" className="h-96"/> */}
-        <video autoPlay loop muted className="h-max z-10">
-          <source src="/assets/videos/Website_Banner_V2_MP4.mp4" type="video/mp4" />
+        <video autoPlay loop muted className="z-10">
+          <source src="/assets/videos/Website_Banner_V2_MP4.mp4" type="video/mp4"/>
         </video>
       </div>
 
