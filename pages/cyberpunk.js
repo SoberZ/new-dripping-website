@@ -172,7 +172,7 @@ const teamData = [
       <Marquee />
 
       <Footer />
-      {/* <Roadmap buttonRef={roadmapRef} changeColor={changeColor} /> */}
+      <Roadmap buttonRef={roadmapRef} changeColor={changeColor} />
     </div>
   );
 }
